@@ -2,19 +2,24 @@
 //  ViewController.swift
 //  Dicee-iOS13
 //
-//  Created by Angela Yu on 11/06/2019.
-//  Copyright © 2019 London App Brewery. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var diceImg1: UIImageView!
+    @IBOutlet weak var diceImg2: UIImageView!
+    var left = 0
+    var right = 5
+    let arr = [UIImage(named: "DiceOne"), UIImage(named: "DiceTwo"), UIImage(named: "DiceThree"), UIImage(named: "DiceFour"), UIImage(named: "DiceFive"), UIImage(named: "DiceSix")]
+
+    @IBAction func rollBtnPress(_ sender: UIButton) {
+        diceImg1.image = arr[Int.random(in: 0...5)]
+        diceImg2.image = arr[Int.random(in: 0...5)]
+        
+        
     }
-
-
+    
 }
 
